@@ -8,8 +8,8 @@ const Register = () => {
         <div className="hero-content flex-col lg:flex-row">
           <div className="text-center lg:text-left">
             <img
-              className="max-w-lg"
-              src="https://i.ibb.co/0257RHK/Blogging-bro.png"
+              className="max-w-lg rounded-lg"
+              src="https://i.ibb.co/JdRj4K0/girl-with-backpack-sunset-generative-al.jpg"
             />
           </div>
 
