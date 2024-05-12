@@ -1,0 +1,39 @@
+[
+    {
+      "thumbnail": "https://i.ibb.co/0GqbhX4/beach.jpg",
+      "post_title": "Beach Cleanup Event",
+      "category": "Environmental Conservation",
+      "deadline": "2024-06-15"
+    },
+    {
+      "thumbnail": "https://i.ibb.co/QNxzLdS/community.jpg",
+      "post_title": "Community Garden Project",
+      "category": "Community Development",
+      "deadline": "2024-06-20"
+    },
+    {
+      "thumbnail": "https://i.ibb.co/qWvvk5H/animal.jpg",
+      "post_title": "Animal Shelter Volunteer",
+      "category": "Animal Welfare",
+      "deadline": "2024-06-25"
+    },
+    {
+      "thumbnail": "https://i.ibb.co/RPWHxQQ/disaster.jpg",
+      "post_title": "Disaster Relief Assistance",
+      "category": "Disaster Relief",
+      "deadline": "2024-07-05"
+    },
+    {
+      "thumbnail": "https://i.ibb.co/h7GLbs7/teach.jpg",
+      "post_title": "Tutoring for Underprivileged Children",
+      "category": "Education and Literacy",
+      "deadline": "2024-07-10"
+    },
+    {
+      "thumbnail": "https://i.ibb.co/Jqnh9gZ/healthcare.jpg",
+      "post_title": "Hospital Volunteer",
+      "category": "Healthcare Support",
+      "deadline": "2024-07-15"
+    }
+  ]
+  
