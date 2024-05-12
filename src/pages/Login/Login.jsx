@@ -7,6 +7,28 @@ const Login = () => {
 
   const {login, logInWithGoogle, logInWithGithub, setUser} = useAuth();
 
+  const errorToast =() => {
+    Swal.fire({
+      title: "Error",
+      text: "Something Went Wrong. Please Try Again.",
+      imageUrl: "https://i.ibb.co/TRYVL4g/error.jpg",
+      imageWidth: 200,
+      imageHeight: 200,
+      imageAlt: "Custom image"
+    })
+  } 
+
+  const successToast = () => {
+    Swal.fire({
+      title: "Successfully Logged In",
+      text: "Explore the world with Impact Volens.",
+      imageUrl: "https://i.ibb.co/bsVz8fp/success-Register.jpg",
+      imageWidth: 200,
+      imageHeight: 200,
+      imageAlt: "Custom image"
+    })
+  }
+
   const handleInput = (e) => {
     e.preventDefault()
     const form = e.target;
@@ -20,19 +42,13 @@ const Login = () => {
     .then((userCredential) => {
       const user = userCredential.user;
       console.log('logged in', user);
-
-      Swal.fire({
-        title: "Successfully Logged In",
-        text: "Explore the world with Impact Volens.",
-        imageUrl: "https://i.ibb.co/bsVz8fp/success-Register.jpg",
-        imageWidth: 200,
-        imageHeight: 200,
-        imageAlt: "Custom image"
-      })
+      setUser(user);
+      successToast()
       
     })
     .catch((error) => {
       console.log(error);
+      errorToast()
     });
     
   }
@@ -42,9 +58,11 @@ const Login = () => {
       .then(res=>{
         console.log(res.user);
         setUser(res.user)
+        successToast()
       })
       .catch(err =>{
         console.log(err);
+        errorToast()
       })
   }
   const handleGithubLogIn = () => {
@@ -52,9 +70,11 @@ const Login = () => {
       .then(res=>{
         console.log(res.user);
         setUser(res.user)
+        successToast()
       })
       .catch(err =>{
         console.log(err);
+        errorToast()
       })
   }
 
