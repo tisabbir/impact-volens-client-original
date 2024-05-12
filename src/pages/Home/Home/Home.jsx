@@ -1,4 +1,5 @@
 import Donation from "../Donation/Donation";
+import Types from "../Types/Types";
 
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
         <div>
             This is home
             <Donation />
+            <Types />
         </div>
     );
 };
