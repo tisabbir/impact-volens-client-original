@@ -2,12 +2,12 @@
 
 const Type = ({type}) => {
 
-    console.log(type);
+    // console.log(type);
 
     const {image, type_name, description} = type;
 
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl mx-auto">
   <figure className="px-10 pt-10">
     <img src={image} alt="Shoes" className="rounded-xl" />
   </figure>
