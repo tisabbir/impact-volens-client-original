@@ -1,10 +1,31 @@
+import { Link, NavLink } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
+import Swal from "sweetalert2";
 
 
 const Nav = () => {
 
+  const {logOut} = useAuth();
+
+  const handleLogOut = () => {
+    logOut()
+    .then(()=>{
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Your have been logged out",
+        showConfirmButton: false,
+        timer: 1500
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  }
+
     const navBar = <>
-        <li><a>Home</a></li>
-        <li><a>Need Volunteer</a></li>
+        <li><NavLink to={'/'}>Home</NavLink></li>
+        <li><NavLink to={'/need'}>Need Volunteer</NavLink></li>
     </>
     return (
         <div>
@@ -20,7 +41,7 @@ const Nav = () => {
         }
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">Impact Volens</a>
+    <Link to={'/'} className="btn btn-ghost text-xl md:text-2xl lg:text-3xl">Impact Volens</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -30,9 +51,9 @@ const Nav = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Login</a>
+    <NavLink to={'/login'} className="btn">Login</NavLink>
     <a className="btn">My Profile</a>
-    <a className="btn">Log Out</a>
+    <a className="btn" onClick={handleLogOut}>Log Out</a>
   </div>
 </div>
         </div>

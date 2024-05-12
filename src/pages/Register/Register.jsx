@@ -1,6 +1,7 @@
-import { fromJSON } from "postcss";
+
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import Swal from "sweetalert2";
 
 
 const Register = () => {
@@ -15,10 +16,33 @@ const Register = () => {
     const photoUrl = form.url.value;
     const password = form.password.value;
 
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+    if(!passwordRegex.test(password)){
+      
+
+      Swal.fire({
+        title: "Error",
+        text: "Password must contain at least 6 characters, must have at least one uppercase and one lowercase letter.",
+        imageUrl: "https://i.ibb.co/TRYVL4g/error.jpg",
+        imageWidth: 200,
+        imageHeight: 200,
+        imageAlt: "Custom image"
+      })
+      return;
+    }
+
     createUser(email, password)
     .then((userCredential) => {
       const user =userCredential.user;
       console.log(user);
+      Swal.fire({
+        title: "Successfully Registered",
+        text: "Welcome to our Impact Volens.",
+        imageUrl: "https://i.ibb.co/bsVz8fp/success-Register.jpg",
+        imageWidth: 200,
+        imageHeight: 200,
+        imageAlt: "Custom image"
+      })
     })
     .catch((err)=>{
       console.log(err);
