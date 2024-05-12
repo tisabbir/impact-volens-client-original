@@ -11,7 +11,6 @@ const Home = () => {
     const {name} = useAuth();
   return (
     <div>
-        <h1>Name : {name}</h1>
       <Banners />
       <VolunteerNeeds />
       <Types />

@@ -1,7 +1,33 @@
+import { fromJSON } from "postcss";
 import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 
 const Register = () => {
+
+  const {createUser} = useAuth();
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const photoUrl = form.url.value;
+    const password = form.password.value;
+
+    createUser(email, password)
+    .then((userCredential) => {
+      const user =userCredential.user;
+      console.log(user);
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
+
+    console.log('register', name, email, photoUrl, password);
+  }
+
+
     return (
         <div>
       <div className="hero min-h-screen bg-base-200">
@@ -15,7 +41,7 @@ const Register = () => {
 
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <h1 className="text-center mt-4 text-2xl font-bold">Register Now</h1>
-            <form className="card-body">
+            <form onSubmit={handleRegister} className="card-body">
                 
               <div className="form-control">
                 <label className="label">
@@ -24,6 +50,7 @@ const Register = () => {
                 <input
                   type="text"
                   placeholder="Name"
+                  name="name"
                   className="input input-bordered"
                   required
                 />
@@ -35,6 +62,7 @@ const Register = () => {
                 <input
                   type="email"
                   placeholder="email"
+                  name="email"
                   className="input input-bordered"
                   required
                 />
@@ -46,6 +74,7 @@ const Register = () => {
                 <input
                   type="text"
                   placeholder="Photo URL"
+                  name="url"
                   className="input input-bordered"
                   required
                 />
@@ -59,6 +88,7 @@ const Register = () => {
                 <input
                   type="password"
                   placeholder="password"
+                  name="password"
                   className="input input-bordered"
                   required
                 />
