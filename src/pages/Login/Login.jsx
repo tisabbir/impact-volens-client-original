@@ -5,7 +5,7 @@ import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
 const Login = () => {
 
-  const {login} = useAuth();
+  const {login, logInWithGoogle, logInWithGithub, setUser} = useAuth();
 
   const handleInput = (e) => {
     e.preventDefault()
@@ -36,6 +36,28 @@ const Login = () => {
     });
     
   }
+
+  const handleGoogleLogIn = () => {
+      logInWithGoogle()
+      .then(res=>{
+        console.log(res.user);
+        setUser(res.user)
+      })
+      .catch(err =>{
+        console.log(err);
+      })
+  }
+  const handleGithubLogIn = () => {
+      logInWithGithub()
+      .then(res=>{
+        console.log(res.user);
+        setUser(res.user)
+      })
+      .catch(err =>{
+        console.log(err);
+      })
+  }
+
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
@@ -85,8 +107,8 @@ const Login = () => {
                 
                 <button className="btn bg-green-500 text-white">Login</button>
                 <div className="text-center space-y-2 mt-4 ">
-                  <button className="btn w-full"> <FaGoogle />Login With Google</button>
-                  <button className="btn w-full"> <FaGithub /> Login With Github</button>
+                  <button onClick={handleGoogleLogIn} className="btn w-full"> <FaGoogle />Login With Google</button>
+                  <button onClick={handleGithubLogIn} className="btn w-full"> <FaGithub /> Login With Github</button>
                 </div>
               </div>
             </form>

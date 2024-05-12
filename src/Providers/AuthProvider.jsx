@@ -70,7 +70,9 @@ const logInWithGithub = () => {
     login, 
     logOut,
     logInWithGoogle,
-    logInWithGithub
+    logInWithGithub,
+    user,
+    setUser
   };
   return (
     <AuthContext.Provider value={allInfo}>{children}</AuthContext.Provider>

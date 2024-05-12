@@ -2,11 +2,13 @@
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
+import { updateProfile } from "firebase/auth";
+import auth from "../../firebase/firebase.config";
 
 
 const Register = () => {
 
-  const {createUser} = useAuth();
+  const {createUser, setUser} = useAuth();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -43,6 +45,19 @@ const Register = () => {
         imageHeight: 200,
         imageAlt: "Custom image"
       })
+
+      setUser({
+        ...user,
+        displayName : name,
+        photoURL : photoUrl,
+        email : email,
+    })
+
+    updateProfile(auth.currentUser, {
+      displayName: name, photoURL:photoUrl ||"https://robohash.org/Alison.png?set=set4",
+    })
+
+
     })
     .catch((err)=>{
       console.log(err);
