@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import VolunteerNeed from "./VolunteerNeed";
+import { Link } from "react-router-dom";
 
 
 const VolunteerNeeds = () => {
@@ -25,7 +26,7 @@ const VolunteerNeeds = () => {
 
            
             </div>
-            <button className="btn bg-indigo-600 text-white text-center mx-auto flex justify-center mt-6 w-1/3">See All</button>
+            <Link to={'/need'} className="btn bg-indigo-600 text-white text-center mx-auto flex justify-center mt-6 w-1/3">See All</Link>
         </div>
     );
 };
