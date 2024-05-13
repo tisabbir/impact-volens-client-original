@@ -3,6 +3,7 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 import useAuth from "../../hooks/useAuth";
+import axios, { Axios } from "axios";
 
 const AddVolunteerPost = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -22,6 +23,15 @@ const AddVolunteerPost = () => {
         const post = {name,email,thumbnail, title, description, category, location, numberOfVolunteer, deadline : startDate}
 
         console.log(post);
+
+        axios.post('http://localhost:5000/post', post)
+        .then(res => {
+            console.log(res.data);
+            alert('done')
+        })
+        .catch(err => {
+            console.log(err);
+        })
   }
 
   const {user} = useAuth();
