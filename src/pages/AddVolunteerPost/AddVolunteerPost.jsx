@@ -5,6 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const AddVolunteerPost = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -45,6 +46,9 @@ const AddVolunteerPost = () => {
   const {user} = useAuth();
   return (
     <div className="mt-12">
+        <Helmet>
+        <title>Add Volunteer || Impact Volens</title>
+      </Helmet>
       <div className="flex justify-around items-center flex-col lg:flex-row">
         <div className="flex-1 m-4">
           <img className="rounded-lg mx-auto h-full object-cover" src="https://i.ibb.co/z2yHm8Y/vol.jpg" />

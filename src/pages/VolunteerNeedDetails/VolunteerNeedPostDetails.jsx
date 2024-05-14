@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
+import { Helmet } from "react-helmet";
 
 const VolunteerNeedPostDetails = () => {
   const post = useLoaderData();
@@ -20,6 +21,9 @@ const VolunteerNeedPostDetails = () => {
 
   return (
     <div>
+        <Helmet>
+        <title>Volunteer Need Details || Impact Volens</title>
+      </Helmet>
       <div className="p-5 mx-auto sm:p-10 md:p-16 bg-white text-gray-800">
         <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
           <img

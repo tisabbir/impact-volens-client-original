@@ -2,6 +2,7 @@ import axios from "axios";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
+import { Helmet } from "react-helmet";
 
 const BeAVolunteer = () => {
   const post = useLoaderData();
@@ -63,6 +64,10 @@ const BeAVolunteer = () => {
 
   return (
     <div className="mt-12">
+
+<Helmet>
+        <title>Be a Voluntee || Impact Volens</title>
+      </Helmet>
       <div className="flex justify-around items-center flex-col lg:flex-row">
         <div className="flex-1 m-4">
           <img

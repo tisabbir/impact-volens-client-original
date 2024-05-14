@@ -2,6 +2,7 @@ import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 const Login = () => {
   const { login, logInWithGoogle, logInWithGithub, setUser } = useAuth();
   const location = useLocation();
@@ -82,6 +83,9 @@ const Login = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Log In || Impact Volens</title>
+      </Helmet>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">

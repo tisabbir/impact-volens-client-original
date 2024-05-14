@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet";
 import AddVolunteerNeeds from "../AddVolunteerPost/AddVolunteerNeeds";
 
 const NeedVolunteers = () => {
   return (
     <div>
+        <Helmet>
+        <title>Need Volunteer || Impact Volens</title>
+      </Helmet>
       <div className="flex justify-center my-6">
         <div className="join">
           <div>

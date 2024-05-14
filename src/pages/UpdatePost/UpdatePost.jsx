@@ -5,6 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const UpdatePost = () => {
   const post = useLoaderData();
@@ -68,7 +69,11 @@ const UpdatePost = () => {
   };
   return (
     <div>
+        
       <div className="mt-12">
+      <Helmet>
+        <title>Update || Impact Volens</title>
+      </Helmet>
         <div className="flex justify-around items-center flex-col lg:flex-row">
           <div className="flex-1 m-4">
             <img
