@@ -12,8 +12,7 @@ const BeAVolunteer = () => {
   const volunteerName = user.displayName;
   const volunteerEmail = user.email;
   const {
-    name,
-    email,
+    
     thumbnail,
     title,
     description,
