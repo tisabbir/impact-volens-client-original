@@ -112,7 +112,7 @@ const MyVolunteerRequestPosts = () => {
                       onClick={() => handleDelete(request._id)}
                       className="btn bg-red-400 text-white"
                     >
-                      Delete
+                      Cancel
                     </button>
                   </td>
                 </tr>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import MyVolunteerRequestPosts from "./MyVolunteerRequestPost/MyVolunteerRequestPosts";
 
-const ManageMyPost = () => {
+const MyNeedVolunteerPost = () => {
   const { user } = useAuth();
   // console.log(user.email);
 
@@ -131,10 +131,9 @@ const ManageMyPost = () => {
       </div>
 
       <div>
-        <MyVolunteerRequestPosts />
       </div>
     </div>
   );
 };
 
-export default ManageMyPost;
+export default MyNeedVolunteerPost;
