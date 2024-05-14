@@ -3,7 +3,8 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 import useAuth from "../../hooks/useAuth";
-import axios, { Axios } from "axios";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 const AddVolunteerPost = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -27,7 +28,14 @@ const AddVolunteerPost = () => {
         axios.post('http://localhost:5000/post', post)
         .then(res => {
             console.log(res.data);
-            alert('done')
+            Swal.fire({
+                title: "Post Added",
+                text: "Successfully Added a Volunteer Need Post",
+                imageUrl: "https://i.ibb.co/bsVz8fp/success-Register.jpg",
+                imageWidth: 200,
+                imageHeight: 200,
+                imageAlt: "Custom image"
+              })
         })
         .catch(err => {
             console.log(err);

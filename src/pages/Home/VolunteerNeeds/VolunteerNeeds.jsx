@@ -20,6 +20,7 @@ const VolunteerNeeds = () => {
         <div>
            <h1 className="text-5xl text-center font-bold mt-12 mb-6">Volunteer Needs</h1>
              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            
             {
                 needs.map((need, index)=><VolunteerNeed key={index} need={need} />)
             }
