@@ -102,7 +102,7 @@ const ManageMyPost = () => {
                       <td>{post.deadline}</td>
                       <td>
                         <Link
-                          to={"/update"}
+                          to={`/update/${post._id}`}
                           className="btn bg-green-400 text-white"
                         >
                           Update
