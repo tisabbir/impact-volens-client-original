@@ -1,12 +1,17 @@
 import axios from "axios";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAuth from "../../hooks/useAuth";
 
 const BeAVolunteer = () => {
   const post = useLoaderData();
+
+  const {user} = useAuth();
   // console.log(post);
+
+  const volunteerName = user.displayName;
+  const volunteerEmail = user.email;
   const {
-    _id,
     name,
     email,
     thumbnail,
@@ -24,8 +29,8 @@ const BeAVolunteer = () => {
     const suggestion = form.suggestion.value;
     const status = form.status.value;
 
-    const volunteerRequest = {  name,
-        email,
+    const volunteerRequest = {  volunteerName,
+        volunteerEmail,
         thumbnail,
         title,
         description,
@@ -39,7 +44,7 @@ const BeAVolunteer = () => {
 
     console.log(volunteerRequest);
 
-    axios.post('http://localhost:5000/request', post)
+    axios.post('http://localhost:5000/request', volunteerRequest)
         .then(res => {
             console.log(res.data);
             Swal.fire({
@@ -119,20 +124,20 @@ const BeAVolunteer = () => {
             </div>
 
             <label className="input input-bordered flex items-center gap-2">
-              Organizer Name
+              Volunteer Name
               <input
                 type="text"
-                defaultValue={name}
+                defaultValue={user.displayName}
                 name="name"
                 className="grow"
                 disabled
               />
             </label>
             <label className="input input-bordered flex items-center gap-2">
-              Organizer Email
+              Volunteer Email
               <input
                 type="text"
-                defaultValue={email}
+                defaultValue={user.email}
                 name="email"
                 className="grow"
                 disabled
