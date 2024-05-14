@@ -31,8 +31,7 @@ const ManageMyPost = () => {
             My Need Volunteer Posts
           </h1>
           <p className="text-center mb-6">Please wait for the volunteers to contribute on your project</p>
-        <h1 className="text-2xl font-bold text-center">Nothing Here</h1>
-        <p className="text-center">Please add some volunteer need post first</p>
+          <h1 className="text-xl font-bold text-center">Nothing Here...</h1>
         <img className="w-1/2 object-cover mx-auto mt-6 rounded-lg" src="https://i.ibb.co/58NM4j1/6915284.jpg" alt="" />
     </div>
   }
