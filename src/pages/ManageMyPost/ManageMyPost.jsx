@@ -3,6 +3,7 @@ import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import MyVolunteerRequestPosts from "./MyVolunteerRequestPost/MyVolunteerRequestPosts";
 
 const ManageMyPost = () => {
   const { user } = useAuth();
@@ -26,9 +27,13 @@ const ManageMyPost = () => {
 
   if(myPosts.length ===0){
     return <div>
+        <h1 className="text-3xl font-bold text-center mb-2">
+            My Need Volunteer Posts
+          </h1>
+          <p className="text-center mb-6">Please wait for the volunteers to contribute on your project</p>
         <h1 className="text-2xl font-bold text-center">Nothing Here</h1>
         <p className="text-center">Please add some volunteer need post first</p>
-        <img className="w-1/2 mx-auto mt-6 rounded-lg" src="https://i.ibb.co/58NM4j1/6915284.jpg" alt="" />
+        <img className="w-1/2 object-cover mx-auto mt-6 rounded-lg" src="https://i.ibb.co/58NM4j1/6915284.jpg" alt="" />
     </div>
   }
 
@@ -124,6 +129,10 @@ const ManageMyPost = () => {
           </div>
 
         </div>
+      </div>
+
+      <div>
+        <MyVolunteerRequestPosts />
       </div>
     </div>
   );
