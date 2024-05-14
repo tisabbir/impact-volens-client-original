@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
 
 const VolunteerNeedPostDetails = () => {
@@ -52,7 +52,7 @@ const VolunteerNeedPostDetails = () => {
               <p>{description}</p>
             </div>
             <div>
-                <button className="btn bg-indigo-600 text-white w-full mt-8">Be a Volunteer</button>
+                <Link to={`/be/${_id}`} className="btn bg-indigo-600 text-white w-full mt-8">Be a Volunteer</Link>
             </div>
           </div>
         </div>

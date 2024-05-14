@@ -91,8 +91,8 @@ const Nav = () => {
 
   </summary>
   <ul className="p-2 shadow menu dropdown-content z-[10] bg-base-100 rounded-box w-52">
-    <Link className="hover:bg-gray-300 p-2 rounded-lg" to={'/add'}><a>Add Volunteer Post</a></Link>
-    <Link className="hover:bg-gray-300 p-2 rounded-lg" to={'/manage'}><a>Manage My Post</a></Link>
+    <Link className="hover:bg-gray-300 p-2 rounded-lg" to={'/add'}>Add Volunteer Post</Link>
+    <Link className="hover:bg-gray-300 p-2 rounded-lg" to={'/manage'}>Manage My Post</Link>
   </ul>
 </details>
 

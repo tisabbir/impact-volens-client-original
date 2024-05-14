@@ -8,6 +8,7 @@ import NeedVolunteers from "../pages/NeedVolunteer/NeedVolunteers";
 import AddVolunteerPost from "../pages/AddVolunteerPost/AddVolunteerPost";
 import VolunteerNeedPostDetails from "../pages/VolunteerNeedDetails/VolunteerNeedPostDetails";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import BeAVolunteer from "../pages/BeAVolunteer/BeAVolunteer";
 
 const router = createBrowserRouter([
     {
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
         {
           path: "/post/:id",
           element: <PrivateRoute><VolunteerNeedPostDetails /></PrivateRoute>,
+          loader: ({params})=>fetch(`http://localhost:5000/post/${params.id}`)
+        },
+        {
+          path: "/be/:id",
+          element: <PrivateRoute><BeAVolunteer /></PrivateRoute>,
           loader: ({params})=>fetch(`http://localhost:5000/post/${params.id}`)
         },
       ],
