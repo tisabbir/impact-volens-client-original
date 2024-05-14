@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const AddVolunteerNeed = ({post}) => {
 
     const {_id, title, thumbnail , category, deadline} = post;
@@ -22,12 +24,12 @@ const AddVolunteerNeed = ({post}) => {
              Deadline: {deadline}
             </p>
           </div>
-          <button
+          <Link to={`/post/${_id}`}
             type="button"
             className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-indigo-500 text-white hover:bg-indigo-400"
           >
             View Details
-          </button>
+          </Link>
         </div>
       </div>
     </div>

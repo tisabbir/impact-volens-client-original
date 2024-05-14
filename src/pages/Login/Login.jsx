@@ -1,22 +1,23 @@
-
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
 const Login = () => {
+  const { login, logInWithGoogle, logInWithGithub, setUser } = useAuth();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location?.state || "/";
 
-  const {login, logInWithGoogle, logInWithGithub, setUser} = useAuth();
-
-  const errorToast =() => {
+  const errorToast = () => {
     Swal.fire({
       title: "Error",
       text: "Something Went Wrong. Please Try Again.",
       imageUrl: "https://i.ibb.co/TRYVL4g/error.jpg",
       imageWidth: 200,
       imageHeight: 200,
-      imageAlt: "Custom image"
-    })
-  } 
+      imageAlt: "Custom image",
+    });
+  };
 
   const successToast = () => {
     Swal.fire({
@@ -25,12 +26,12 @@ const Login = () => {
       imageUrl: "https://i.ibb.co/bsVz8fp/success-Register.jpg",
       imageWidth: 200,
       imageHeight: 200,
-      imageAlt: "Custom image"
-    })
-  }
+      imageAlt: "Custom image",
+    });
+  };
 
   const handleInput = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
@@ -39,44 +40,45 @@ const Login = () => {
 
     //login
     login(email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-      console.log('logged in', user);
-      setUser(user);
-      successToast()
-      
-    })
-    .catch((error) => {
-      console.log(error);
-      errorToast()
-    });
-    
-  }
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log("logged in", user);
+        setUser(user);
+        successToast();
+        navigate(from);
+      })
+      .catch((error) => {
+        console.log(error);
+        errorToast();
+      });
+  };
 
   const handleGoogleLogIn = () => {
-      logInWithGoogle()
-      .then(res=>{
+    logInWithGoogle()
+      .then((res) => {
         console.log(res.user);
-        setUser(res.user)
-        successToast()
+        setUser(res.user);
+        successToast();
+        navigate(from);
       })
-      .catch(err =>{
+      .catch((err) => {
         console.log(err);
-        errorToast()
-      })
-  }
+        errorToast();
+      });
+  };
   const handleGithubLogIn = () => {
-      logInWithGithub()
-      .then(res=>{
+    logInWithGithub()
+      .then((res) => {
         console.log(res.user);
-        setUser(res.user)
-        successToast()
+        setUser(res.user);
+        successToast();
+        navigate(from);
       })
-      .catch(err =>{
+      .catch((err) => {
         console.log(err);
-        errorToast()
-      })
-  }
+        errorToast();
+      });
+  };
 
   return (
     <div>
@@ -112,7 +114,6 @@ const Login = () => {
                   type="password"
                   placeholder="password"
                   name="password"
-
                   className="input input-bordered"
                   required
                 />
@@ -123,12 +124,24 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <h1 className="text-center mb-2">New Here? <Link to={'/register'} className="text-blue-500">Register Now</Link></h1>
-                
+                <h1 className="text-center mb-2">
+                  New Here?{" "}
+                  <Link to={"/register"} className="text-blue-500">
+                    Register Now
+                  </Link>
+                </h1>
+
                 <button className="btn bg-green-500 text-white">Login</button>
                 <div className="text-center space-y-2 mt-4 ">
-                  <button onClick={handleGoogleLogIn} className="btn w-full"> <FaGoogle />Login With Google</button>
-                  <button onClick={handleGithubLogIn} className="btn w-full"> <FaGithub /> Login With Github</button>
+                  <button onClick={handleGoogleLogIn} className="btn w-full">
+                    {" "}
+                    <FaGoogle />
+                    Login With Google
+                  </button>
+                  <button onClick={handleGithubLogIn} className="btn w-full">
+                    {" "}
+                    <FaGithub /> Login With Github
+                  </button>
                 </div>
               </div>
             </form>
