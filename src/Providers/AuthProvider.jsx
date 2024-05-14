@@ -9,6 +9,7 @@ import {
   signInWithPopup,
   signOut,
 } from "firebase/auth";
+import axios from "axios";
 
 export const AuthContext = createContext(auth);
 
@@ -57,6 +58,15 @@ const logInWithGithub = () => {
             setLoading(false);
             setUser(currentUser);
             console.log('From auth state changed', currentUser);
+
+            //jodi current user thake tahole a mi ekta request pathabo amake token daw server please
+            if(currentUser){
+                const loggedUser = {email : currentUser.email}
+                axios.post('http://localhost:5000/jwt', loggedUser, {withCredentials:true}) // site 2ta alada
+                .then(res => {
+                    console.log('server theke asha response access token', res.data);
+                })
+            }
 
         } 
         return () => {
