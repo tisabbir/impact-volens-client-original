@@ -15,25 +15,25 @@ const Donation = () => {
                 <h4 className="text-2xl font-bold">DONOR</h4>
                 <span className="text-5xl font-bold">SILVER</span>
               </div>
-              <p className="mt-3 leading-relaxed">Etiam ac convallis enim, eget euismod dolor.</p>
+              <p className="mt-3 leading-relaxed">Be our silver donor.</p>
               <ul className="flex-1 mb-6">
                 <li className="flex mb-2 space-x-2 items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0 w-6 h-6 text-indigo-600">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span>Aenean quis</span>
+                  <span>Effective Consistent Donor</span>
                 </li>
                 <li className="flex mb-2 space-x-2 items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0 w-6 h-6 text-indigo-600">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span>Morbi semper</span>
+                  <span>Easy to cancel any time</span>
                 </li>
                 <li className="flex mb-2 space-x-2 items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0 w-6 h-6 text-indigo-600">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span>Tristique enim nec</span>
+                  <span>Not That Much Pressure</span>
                 </li>
               </ul>
               <button type="button" className="inline-block px-5 py-3 font-semibold tracking-wider text-center rounded bg-indigo-600 text-white">Get Started</button>
@@ -45,7 +45,7 @@ const Donation = () => {
                 <h4 className="text-2xl font-bold">DONOR</h4>
                 <span className="text-6xl font-bold">GOLD</span>
               </div>
-              <p className="leading-relaxed">Morbi cursus ut sapien sit amet consectetur.</p>
+              <p className="leading-relaxed">Be our gold donor.</p>
               <ul className="flex-1 space-y-2">
                 <li className="flex items-center space-x-2">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0 w-6 h-6 text-gray-100">
@@ -57,19 +57,19 @@ const Donation = () => {
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0 w-6 h-6 text-gray-100">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span>Phasellus tellus</span>
+                  <span>Effective Consistent Donor</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0 w-6 h-6 text-gray-100">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span>Praesent faucibus</span>
+                  <span>Easy to cancel any time</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0 w-6 h-6 text-gray-100">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span>Aenean et lectus blandit</span>
+                  <span>Not That Much Pressure</span>
                 </li>
               </ul>
               <a href="#" className="inline-block w-full px-5 py-3 font-bold tracking-wider text-center rounded bg-gray-800 text-indigo-600">Get Started</a>
@@ -81,37 +81,37 @@ const Donation = () => {
                 <h4 className="text-2xl font-bold">DONOR</h4>
                 <span className="text-6xl font-bold">PLATINUM</span>
               </div>
-              <p className="leading-relaxed">Phasellus ultrices bibendum nibh in vehicula.</p>
+              <p className="leading-relaxed">Be our platinum donor.</p>
               <ul className="space-y-2">
                 <li className="flex items-start space-x-2">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0 w-6 h-6 text-indigo-600">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span>Everything in Pro</span>
+                  <span>Everything in Gold</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0 w-6 h-6 text-indigo-600">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span>Fusce sem ligula</span>
+                  <span>Get highlights</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0 w-6 h-6 text-indigo-600">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span>Curabitur dictum</span>
+                  <span>Effective Consistent Donor</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0 w-6 h-6 text-indigo-600">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span>Duis odio eros</span>
+                  <span>Exclusive Donor</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0 w-6 h-6 text-indigo-600">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span>Vivamus ut lectus ex</span>
+                  <span>Not That Much Pressure</span>
                 </li>
               </ul>
               <a href="#" className="inline-block w-full px-5 py-3 font-semibold tracking-wider text-center rounded bg-indigo-600 text-gray-100">Get Started</a>

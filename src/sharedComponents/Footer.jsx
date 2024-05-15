@@ -25,10 +25,10 @@ const Footer = () => {
 						<a rel="noopener noreferrer" href="#">Features</a>
 					</li>
 					<li>
-						<a rel="noopener noreferrer" href="#">Integrations</a>
+						<a rel="noopener noreferrer" href="#">Donation Method</a>
 					</li>
 					<li>
-						<a rel="noopener noreferrer" href="#">Pricing</a>
+						<a rel="noopener noreferrer" href="#">How to be a volunteer</a>
 					</li>
 					<li>
 						<a rel="noopener noreferrer" href="#">FAQ</a>
@@ -86,7 +86,7 @@ const Footer = () => {
 			</div>
 		</div>
 	</div>
-	<div className="py-6 text-sm text-center text-gray-600">© 1968 Company Co. All rights reserved.</div>
+	<div className="py-6 text-sm text-center text-gray-600">© 2024 Impact Volens. All rights reserved.</div>
 </footer>
         </div>
     );
