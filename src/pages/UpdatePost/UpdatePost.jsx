@@ -11,7 +11,7 @@ const UpdatePost = () => {
   const post = useLoaderData();
   const [startDate, setStartDate] = useState(new Date());
   console.log("update page theke", post);
-    const {user} = useAuth();
+    // const {user} = useAuth();
   const {
     _id,
     name,
@@ -21,7 +21,6 @@ const UpdatePost = () => {
     description,
     category,
     location,
-    deadline,
     numberOfVolunteer,
   } = post;
 
