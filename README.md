@@ -1,8 +1,18 @@
-# React + Vite
+# Impact Volens
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Live Link](https://impact-volens.web.app/) : https://impact-volens.web.app/
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User Authentication:
+- Users can register, login, and logout securely.
+- User credentials are secured using JWT.
+
+- Post Management:
+- Users can create, update, and delete "need volunteers" posts.
+- Users can update or delete their volunteer posts.
+
+- Volunteer Matching:
+- Users can volunteer for posts created by others.
+- Users can update or delete their volunteer status.
+
