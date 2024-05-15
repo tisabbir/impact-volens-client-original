@@ -8,7 +8,7 @@ const AddVolunteerNeeds = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/post', {withCredentials:true})
+        axios.get('http://localhost:5000/public', {withCredentials:true})
         .then(res => {
             console.log('volunteer need posts', res.data);
             setPosts(res.data)

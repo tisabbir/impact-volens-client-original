@@ -45,8 +45,8 @@ const logInWithGithub = () => {
 
   const logOut = () => {
 
-    setLoading(true);
-    setUser(null)
+      setLoading(true);
+    //   setUser(null)
     return signOut(auth);
   }
 
@@ -55,8 +55,8 @@ const logInWithGithub = () => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
         if(currentUser){
             //
-            setLoading(false);
             setUser(currentUser);
+            setLoading(false);
             console.log('From auth state changed', currentUser);
 
             //jodi current user thake tahole a mi ekta request pathabo amake token daw server please
@@ -79,6 +79,7 @@ const logInWithGithub = () => {
     createUser,
     login, 
     logOut,
+    loading,
     logInWithGoogle,
     logInWithGithub,
     user,

@@ -13,7 +13,7 @@ const MyNeedVolunteerPost = () => {
 
   //useEffect
   useEffect(() => {
-    axios("http://localhost:5000/post", {withCredentials: true})
+    axios(`http://localhost:5000/post?email=${user?.email}`, {withCredentials: true})
       .then((res) => {
         console.log(res.data);
         const data = res.data;
