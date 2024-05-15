@@ -5,17 +5,21 @@ import Swal from "sweetalert2";
 const MyVolunteerRequestPosts = () => {
   const { user } = useAuth();
   const [myRequests, setMyRequests] = useState([]);
+//   console.log('the user from my need volunteer post', user.email);
+  const url = `http://localhost:5000/request?email=${user?.email}`;
 
   useEffect(() => {
-    fetch("http://localhost:5000/request")
+    // fetch("http://localhost:5000/request")
+    fetch(url, {credentials:'include'})
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        setMyRequests(
-          data.filter((request) => request.volunteerEmail === user.email)
-        );
+        console.log('my requests',data);
+        // setMyRequests(
+        //   data.filter((request) => request.volunteerEmail === user.email)
+        // );
+        setMyRequests(data)
       });
-  }, [user.email]);
+  }, [url, user.email]);
 
   console.log("myRequests", myRequests);
 

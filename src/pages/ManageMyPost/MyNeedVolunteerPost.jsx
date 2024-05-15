@@ -13,11 +13,10 @@ const MyNeedVolunteerPost = () => {
 
   //useEffect
   useEffect(() => {
-    fetch("http://localhost:5000/post")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-
+    axios("http://localhost:5000/post", {withCredentials: true})
+      .then((res) => {
+        console.log(res.data);
+        const data = res.data;
         setMyPosts(data.filter((post) => post.email === user.email));
       })
       .catch((err) => console.log(err));
