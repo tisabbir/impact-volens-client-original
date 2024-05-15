@@ -8,7 +8,7 @@ const Types = () => {
     const [types, setTypes] = useState([]);
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/types')
+        axios.get('https://impact-volens-server.vercel.app/types')
         .then(res => {
             // console.log(res.data);
             setTypes(res.data);

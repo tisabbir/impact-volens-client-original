@@ -6,14 +6,14 @@ const MyVolunteerRequestPosts = () => {
   const { user } = useAuth();
   const [myRequests, setMyRequests] = useState([]);
 //   console.log('the user from my need volunteer post', user.email);
-  const url = `http://localhost:5000/request?email=${user?.email}`;
+  const url = `https://impact-volens-server.vercel.app/request?email=${user?.email}`;
 
   useEffect(() => {
-    // fetch("http://localhost:5000/request")
+    // fetch("https://impact-volens-server.vercel.app/request")
     fetch(url, {credentials:'include'})
       .then((res) => res.json())
       .then((data) => {
-        console.log('my requests',data);
+        // console.log('my requests',data);
         // setMyRequests(
         //   data.filter((request) => request.volunteerEmail === user.email)
         // );
@@ -21,7 +21,7 @@ const MyVolunteerRequestPosts = () => {
       });
   }, [url, user.email]);
 
-  console.log("myRequests", myRequests);
+//   console.log("myRequests", myRequests);
 
   // const {_id, thumbnail, title, category, location, numberOfVolunteer} = myRequests;
 
@@ -58,12 +58,12 @@ const MyVolunteerRequestPosts = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/request/${id}`, {
+        fetch(`https://impact-volens-server.vercel.app/request/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
+            // console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire({
                 title: "Deleted!",

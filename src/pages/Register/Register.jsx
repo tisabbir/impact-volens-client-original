@@ -37,7 +37,7 @@ const Register = () => {
     createUser(email, password)
     .then((userCredential) => {
       const user =userCredential.user;
-      console.log(user);
+      // console.log(user);
       Swal.fire({
         title: "Successfully Registered",
         text: "Welcome to our Impact Volens.",
@@ -64,7 +64,7 @@ const Register = () => {
       console.log(err);
     })
 
-    console.log('register', name, email, photoUrl, password);
+    // console.log('register', name, email, photoUrl, password);
   }
 
 

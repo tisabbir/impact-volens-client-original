@@ -1,4 +1,7 @@
-import { FaGithub, FaGoogle } from "react-icons/fa";
+import { 
+  FaGithub,
+  
+  FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
@@ -43,7 +46,7 @@ const Login = () => {
     login(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log("logged in", user);
+        // console.log("logged in", user);
         setUser(user);
         successToast();
         navigate(from);
@@ -57,7 +60,7 @@ const Login = () => {
   const handleGoogleLogIn = () => {
     logInWithGoogle()
       .then((res) => {
-        console.log(res.user);
+        // console.log(res.user);
         setUser(res.user);
         successToast();
         navigate(from);
@@ -67,19 +70,20 @@ const Login = () => {
         errorToast();
       });
   };
-  const handleGithubLogIn = () => {
-    logInWithGithub()
-      .then((res) => {
-        console.log(res.user);
-        setUser(res.user);
-        successToast();
-        navigate(from);
-      })
-      .catch((err) => {
-        console.log(err);
-        errorToast();
-      });
-  };
+  
+  // const handleGithubLogIn = () => {
+  //   logInWithGithub()
+  //     .then((res) => {
+  //       // console.log(res.user);
+  //       setUser(res.user);
+  //       successToast();
+  //       navigate(from);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //       errorToast();
+  //     });
+  // };
 
   return (
     <div>
@@ -142,10 +146,10 @@ const Login = () => {
                     <FaGoogle />
                     Login With Google
                   </button>
-                  <button onClick={handleGithubLogIn} className="btn w-full">
+                  {/* <button onClick={handleGithubLogIn} className="btn w-full">
                     {" "}
                     <FaGithub /> Login With Github
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </form>

@@ -3,14 +3,13 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from "react";
-import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
 
 const UpdatePost = () => {
   const post = useLoaderData();
   const [startDate, setStartDate] = useState(new Date());
-  console.log("update page theke", post);
+//   console.log("update page theke", post);
     // const {user} = useAuth();
   const {
     _id,
@@ -38,9 +37,9 @@ const UpdatePost = () => {
     const updatedDeadline = startDate;
 
     const updatedPost = {updatedName, updatedEmail, updatedTitle, updatedThumbnail, updatedDescription, updatedCategory,updatedLocation, updatedNumberOfVolunteer, updatedDeadline};
-    console.log(updatedPost);
+    // console.log(updatedPost);
 
-    fetch(`http://localhost:5000/post/${_id}`, {
+    fetch(`https://impact-volens-server.vercel.app/post/${_id}`, {
         credentials : 'include',
         method : "PUT",
         headers : {
@@ -51,7 +50,7 @@ const UpdatePost = () => {
     }, )
     .then(res => res.json())
     .then(data => {
-        console.log(data);
+        // console.log(data);
         if(data.modifiedCount>0){
             //update the state
             Swal.fire({

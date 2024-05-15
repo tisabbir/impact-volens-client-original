@@ -3,7 +3,6 @@ import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-import MyVolunteerRequestPosts from "./MyVolunteerRequestPost/MyVolunteerRequestPosts";
 
 const MyNeedVolunteerPost = () => {
   const { user } = useAuth();
@@ -13,16 +12,16 @@ const MyNeedVolunteerPost = () => {
 
   //useEffect
   useEffect(() => {
-    axios(`http://localhost:5000/post?email=${user?.email}`, {withCredentials: true})
+    axios(`https://impact-volens-server.vercel.app/post?email=${user?.email}`, {withCredentials: true})
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         const data = res.data;
         setMyPosts(data.filter((post) => post.email === user.email));
       })
       .catch((err) => console.log(err));
   }, [user.email]);
 
-  console.log(myPosts);
+  // console.log(myPosts);
 
   if(myPosts.length ===0){
     return <div>
@@ -50,12 +49,12 @@ const MyNeedVolunteerPost = () => {
         if (result.isConfirmed) {
 
 
-            fetch(`http://localhost:5000/post/${id}`, {
+            fetch(`https://impact-volens-server.vercel.app/post/${id}`, {
                 method: "DELETE"
             })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 if(data.deletedCount>0){
                     Swal.fire({
                         title: "Deleted!",

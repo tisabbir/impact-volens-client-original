@@ -24,11 +24,11 @@ const AddVolunteerPost = () => {
        
         const post = {name,email,thumbnail, title, description, category, location, numberOfVolunteer, deadline : startDate}
 
-        console.log(post);
+        // console.log(post);
 
-        axios.post('http://localhost:5000/post', post, {withCredentials:true})
-        .then(res => {
-            console.log(res.data);
+        axios.post('https://impact-volens-server.vercel.app/post', post, {withCredentials:true})
+        .then(() => {
+            // console.log(res.data);
             Swal.fire({
                 title: "Post Added",
                 text: "Successfully Added a Volunteer Need Post",

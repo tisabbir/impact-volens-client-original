@@ -57,14 +57,14 @@ const logInWithGithub = () => {
             //
             setUser(currentUser);
             setLoading(false);
-            console.log('From auth state changed', currentUser);
+            // console.log('From auth state changed', currentUser);
 
             //jodi current user thake tahole a mi ekta request pathabo amake token daw server please
             if(currentUser){
                 const loggedUser = {email : currentUser.email}
-                axios.post('http://localhost:5000/jwt', loggedUser, {withCredentials:true}) // site 2ta alada
-                .then(res => {
-                    console.log('server theke asha response access token', res.data);
+                axios.post('https://impact-volens-server.vercel.app/jwt', loggedUser, {withCredentials:true}) // site 2ta alada
+                .then(() => {
+                    // console.log('server theke asha response access token', res.data);
                 })
             }
 

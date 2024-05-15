@@ -8,9 +8,9 @@ const AddVolunteerNeeds = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/public', {withCredentials:true})
+        axios.get('https://impact-volens-server.vercel.app/public', {withCredentials:true})
         .then(res => {
-            console.log('volunteer need posts', res.data);
+            // console.log('volunteer need posts', res.data);
             setPosts(res.data)
         })
     },[])

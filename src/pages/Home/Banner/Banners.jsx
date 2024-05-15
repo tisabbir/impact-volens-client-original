@@ -10,8 +10,8 @@ import Banner from "./Banner";
 const Banners = () => {
   const [banners, setBanners] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:5000/banners").then((res) => {
-      console.log("banner", res.data);
+    axios.get("https://impact-volens-server.vercel.app/banners").then((res) => {
+    //   console.log("banner", res.data);
       setBanners(res.data);
     });
   }, []);

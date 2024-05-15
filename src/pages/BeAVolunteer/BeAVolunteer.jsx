@@ -42,11 +42,11 @@ const BeAVolunteer = () => {
         status
     }
 
-    console.log(volunteerRequest);
+    // console.log(volunteerRequest);
 
-    axios.post('http://localhost:5000/request', volunteerRequest, {withCredentials : true})
-        .then(res => {
-            console.log(res.data);
+    axios.post('https://impact-volens-server.vercel.app/request', volunteerRequest, {withCredentials : true})
+        .then(() => {
+            // console.log(res.data);
             Swal.fire({
                 title: "Request Added",
                 text: "Successfully Added a Volunteer Request Post",
