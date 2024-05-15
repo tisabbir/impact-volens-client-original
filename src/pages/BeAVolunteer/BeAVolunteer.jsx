@@ -44,7 +44,7 @@ const BeAVolunteer = () => {
 
     console.log(volunteerRequest);
 
-    axios.post('http://localhost:5000/request', volunteerRequest)
+    axios.post('http://localhost:5000/request', volunteerRequest, {withCredentials : true})
         .then(res => {
             console.log(res.data);
             Swal.fire({

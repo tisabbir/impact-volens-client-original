@@ -26,7 +26,7 @@ const AddVolunteerPost = () => {
 
         console.log(post);
 
-        axios.post('http://localhost:5000/post', post)
+        axios.post('http://localhost:5000/post', post, {withCredentials:true})
         .then(res => {
             console.log(res.data);
             Swal.fire({

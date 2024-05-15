@@ -42,13 +42,14 @@ const UpdatePost = () => {
     console.log(updatedPost);
 
     fetch(`http://localhost:5000/post/${_id}`, {
+        credentials : 'include',
         method : "PUT",
         headers : {
             'content-type' : "application/json"
         },
         body: JSON.stringify(updatedPost)
 
-    })
+    }, )
     .then(res => res.json())
     .then(data => {
         console.log(data);

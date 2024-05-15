@@ -47,17 +47,17 @@ const router = createBrowserRouter([
         {
           path: "/post/:id",
           element: <PrivateRoute><VolunteerNeedPostDetails /></PrivateRoute>,
-          loader: ({params})=>fetch(`http://localhost:5000/post/${params.id}`)
+          loader: ({params})=>fetch(`http://localhost:5000/post/${params.id}`, {credentials: 'include'})
         },
         {
           path: "/be/:id",
           element: <PrivateRoute><BeAVolunteer /></PrivateRoute>,
-          loader: ({params})=>fetch(`http://localhost:5000/post/${params.id}`)
+          loader: ({params})=>fetch(`http://localhost:5000/post/${params.id}`, {credentials: 'include'})
         },
         {
           path: "/update/:id",
           element: <PrivateRoute><UpdatePost /></PrivateRoute>,
-          loader: ({params})=>fetch(`http://localhost:5000/post/${params.id}`)
+          loader: ({params})=>fetch(`http://localhost:5000/post/${params.id}`, {credentials: 'include'})
         },
       ],
     },
