@@ -94,7 +94,7 @@ const Login = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <img
-              className="max-w-lg"
+              className="max-w-sm md:max-w-md lg:max-w-lg"
               src="https://i.ibb.co/0257RHK/Blogging-bro.png"
             />
           </div>

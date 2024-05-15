@@ -3,7 +3,7 @@
 const Donation = () => {
     return (
         <section className="py-20 bg-gray-100 text-gray-800">
-      <div className="container px-4 mx-auto">
+      <div className="container px-2 mx-auto">
         <div className="max-w-2xl mx-auto mb-16 text-center">
           <span className="font-bold tracking-wider uppercase text-indigo-600">Donation Plan</span>
           <h2 className="text-4xl font-bold lg:text-5xl">Donate to Change Life</h2>
@@ -13,7 +13,7 @@ const Donation = () => {
             <div className="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 bg-gray-200 text-gray-800">
               <div className="space-y-2">
                 <h4 className="text-2xl font-bold">DONOR</h4>
-                <span className="text-6xl font-bold">SILVER</span>
+                <span className="text-5xl font-bold">SILVER</span>
               </div>
               <p className="mt-3 leading-relaxed">Etiam ac convallis enim, eget euismod dolor.</p>
               <ul className="flex-1 mb-6">

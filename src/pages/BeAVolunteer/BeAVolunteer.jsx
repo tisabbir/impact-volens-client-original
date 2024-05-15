@@ -80,7 +80,7 @@ const BeAVolunteer = () => {
 
           <form
             onSubmit={handleRequest}
-            className="flex-grow grid grid-cols-1 md:grid-cols-2 gap-4"
+            className=" flex-grow grid grid-cols-1 md:grid-cols-2 gap-4"
           >
             <label className="input input-bordered flex items-center gap-2 lg:col-span-2">
               Post Title

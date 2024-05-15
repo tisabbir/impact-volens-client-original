@@ -17,8 +17,8 @@ const Types = () => {
     
     return (
         <div>
-            <h1 className="text-5xl text-center font-bold mt-12 mb-6">Types of Volunteering We Offer</h1>
-             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold mt-12 mb-6">Types of Volunteering We Offer</h1>
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
              {
                 types.map((type,index)=><Type key={index} type={type} />)
              }
