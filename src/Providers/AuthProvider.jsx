@@ -83,7 +83,8 @@ const logInWithGithub = () => {
     logInWithGoogle,
     logInWithGithub,
     user,
-    setUser
+    setUser,
+    setLoading
   };
   return (
     <AuthContext.Provider value={allInfo}>{children}</AuthContext.Provider>

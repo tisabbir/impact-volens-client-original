@@ -3,13 +3,15 @@ import useAuth from "../hooks/useAuth";
 import Swal from "sweetalert2";
 
 const Nav = () => {
-  const { logOut, user } = useAuth();
+  const { logOut, user, setUser, setLoading } = useAuth();
 
   console.log('user from navbar', user);
 
   const handleLogOut = () => {
     logOut()
       .then(() => {
+        setUser(null)
+        setLoading(false)
         Swal.fire({
           position: "top-end",
           icon: "success",
