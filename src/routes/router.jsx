@@ -12,6 +12,8 @@ import BeAVolunteer from "../pages/BeAVolunteer/BeAVolunteer";
 
 import UpdatePost from "../pages/UpdatePost/UpdatePost";
 import ManageMyPost from "../pages/ManageMyPost/MyVolunteerRequestPost/ManageMyPost";
+import Reviews from "../pages/Reviews/Reviews";
+import Feedback from "../pages/Feedback/Feedback";
 
 const router = createBrowserRouter([
     {
@@ -36,6 +38,11 @@ const router = createBrowserRouter([
           element: <NeedVolunteers />,
         },
         {
+          path: "/reviews",
+          element: <Reviews />,
+          loader: ()=>fetch('https://impact-volens-server.vercel.app/reviews')
+        },
+        {
           path: "/manage",
           element: <PrivateRoute><ManageMyPost /></PrivateRoute>,
         },
@@ -58,6 +65,11 @@ const router = createBrowserRouter([
           element: <PrivateRoute><UpdatePost /></PrivateRoute>,
           loader: ({params})=>fetch(`https://impact-volens-server.vercel.app/post/${params.id}`, {credentials: 'include'})
         },
+        {
+          path: '/feedback/:id',
+          element : <PrivateRoute><Feedback /></PrivateRoute>,
+          loader : ({params}) => fetch(`https://impact-volens-server.vercel.app/feedback/${params.id}`)
+        }
       ],
     },
   ]);

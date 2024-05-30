@@ -33,6 +33,9 @@ const Nav = () => {
       <li>
         <NavLink to={"/need"}>Need Volunteer</NavLink>
       </li>
+      <li>
+        <NavLink to={"/reviews"}>Reviews</NavLink>
+      </li>
     </>
   );
   return (
